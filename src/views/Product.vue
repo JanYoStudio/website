@@ -34,14 +34,12 @@ const products = ref([
     name: 'WhatAnime - 以图搜番',
     description: '如果你在网络上看到一张酷似二次元番剧的插图，并且相当的感兴趣，你可以保存起来，使用WhatAnime找到它的出处。',
     image: '/images/what-anime.jpg',
-    link: '/wa/index.html',
     playStoreLink: 'https://play.google.com/store/apps/details?id=pw.janyo.whatanime&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
   },
   {
     name: 'JanYo Share - 更好的分享应用',
     description: '想要将应用分享给朋友但是复制出来是base.apk？自己懒得命名？通过社交软件分享APP，过一段时间群文件全部是base.apk？每一次清理群文件都很麻烦？现在，通过JanYo Share，体验一键式操作。',
     image: '/images/janyo-share.jpg',
-    link: '/jys/index.html',
     disable: true
   }
 ])

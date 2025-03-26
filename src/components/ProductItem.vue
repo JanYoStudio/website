@@ -8,11 +8,20 @@
             </el-col>
             <el-col :span="12">
                 <div class="product-info">
-                    <h2><a :href="product.link">{{ product.name }}</a></h2>
+                    <h2>{{ product.name }}</h2>
                     <p class="description">{{ product.description }}</p>
                     <div class="download-section">
                         <template v-if="!disable">
                             <slot name="download">
+                                <template v-if="product.playStoreLink">
+                                    <a :href="product.playStoreLink">
+                                        <img alt="下载应用，请到 Google Play" style="height: 80px;"
+                                            src="/images/google-play.png" />
+                                    </a>
+                                </template>
+                                <template v-else>
+                                    <p>目前已经停止开发</p>
+                                </template>
                             </slot>
                         </template>
                     </div>
@@ -23,8 +32,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
 const props = defineProps({
     product: {
         type: Object,
