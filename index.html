@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JanYo Studio</title>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.6/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div>
+        <!--导航-->
+        <div class="nav index">
+            <div class="layui-container">
+                <div class="nav-logo" id="navLogo"></div>
+                <div class="nav-list">
+                    <button>
+                        <span></span><span></span><span></span>
+                    </button>
+                    <ul class="layui-nav" id="navList" lay-filter></ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="layui-carousel" id="banner">
+                <div carousel-item class="layui-row">
+                    <div id="banner1" class="layui-col-md12">
+                    </div>
+                    <div id="banner2" class="layui-col-md12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--时间线-->
+        <div class="layui-container timeline-cus" style="padding-top: 90px;padding-bottom: 130px;">
+            <div class="layui-row">
+                <ul class="layui-timeline layui-col-md-offset2 layui-col-xs12">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2014年11月</h3>
+                            <p>
+                                JanYo Studio 成立，取名 "酱油工作室" 。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年5月11日</h3>
+                            <p>
+                                liuyuhong 提出开发 JY Share Android客户端，旨在解决QQ中安装包分享问题。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年5月29日</h3>
+                            <p>
+                                Mystery0 重构 JY Share demo代码，正式开始开发。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年6月22日</h3>
+                            <p>
+                                JY Share 上架 Google Play。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年8月</h3>
+                            <p>
+                                liuyuhong 提出开发 WhatAnime （原为 WhatAnime.ga ，现为 <a href="https://trace.moe">Trace.moe</a> ）的Android客户端。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年8月17日</h3>
+                            <p>
+                                WhatAnime push <a href="https://github.com/JanYoStudio/WhatAnime/commit/ac95397061f5b9a4f6dee84a33b31a6cd76186ef">第一次提交</a>到
+                                <a href="https://github.com/JanYoStudio/WhatAnime">GitHub</a> 。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年9月17日</h3>
+                            <p>
+                                WhatAnime 1.0 版本上架 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a>。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年10月27日</h3>
+                            <p>
+                                WhatAnime 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a> 下载安装量超过 100。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2017年12月22日</h3>
+                            <p>WhatAnime 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a> 下载安装量超过 500。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2018年1月16日</h3>
+                            <p>因 JY Share 代码丢失，加上部分代码不合理，JY Share 停止开发，转而进行开发 JanYo Share (2.0)。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2018年2月</h3>
+                            <p>JanYo Share上架 <a href="https://www.coolapk.com/apk/pw.janyo.janyoshare">酷安网</a> 。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2018年3月15日</h3>
+                            <p>WhatAnime 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a> 下载安装量超过 1000。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2019年4月27日</h3>
+                            <p>JanYo Share 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.janyoshare">Google
+                                    Play</a> 下载安装量超过 100。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2019年5月25日</h3>
+                            <p>WhatAnime 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a> 下载安装量超过 5000。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2020年7月</h3>
+                            <p>WhatAnime 在 <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime">Google
+                                    Play</a> 下载安装量超过 10000。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">2020年9月8日</h3>
+                            <p>因为实在没有空闲时间用于处理JanYo Share的更新，宣布JanYo Share停止开发。</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <div class="layui-timeline-title">现在……</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--成员-->
+        <div class="layui-container">
+            <hr class="layui-bg-cyan">
+            <div class="layui-row">
+                <div class="layui-col-md12 center layui-text">
+                    <h4 style="margin-top: 60px; margin-bottom: 60px;">The Team</h4>
+                    <div class="row center">
+                        <bioContainer class="layui-col-md4 layui-col-xs12">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/dl.jpeg" draggable="false" alt="">
+                                <h5>Dick Light</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/lyh.jpeg" draggable="false" alt="">
+                                <h5>liuyuhong</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/cg.jpeg" draggable="false" alt="">
+                                <h5>艾佳琛</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/my.jpeg" draggable="false" alt="">
+                                <h5>Mystery0</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/gs.jpeg" draggable="false" alt="">
+                                <h5>Gsoy</h5>
+                            </bioCard>
+                        </bioContainer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer部分 -->
+        <footer class="footer" id="footer"></footer>
+    </div>
+
+    <script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
+    <script src="/js/config.js"></script>
+    <script>
+        layui.use(['toolbar', 'footer', 'jquery', 'carousel', 'element'], function() {
+            const $ = layui.jquery;
+            const carousel = layui.carousel;
+            const navIndex = $('.nav');
+            let isExpand = false; //初始化为未展开状态
+            layui.toolbar.init('index', function() {
+                navIndex.css('background', 'rgba(255,255,255,0.9)');
+                //设置为已展开
+                isExpand = true;
+            }, function() {
+                const now = window.pageYOffset;
+                let percent = 0.9;
+                if (now <= 900) {
+                    percent = now / 900 * percent;
+                }
+                navIndex.css('background', 'rgba(255,255,255,' + percent + ')');
+                //设置为未展开
+                isExpand = false;
+            });
+            //建造实例
+            carousel.render({
+                elem: '#banner',
+                arrow: 'hover',
+                anim: 'fade',
+                indicator: 'inside'
+            });
+
+            //滚动监听
+            $(window).scroll(function() {
+                const now = window.pageYOffset;
+                let percent = 0.9;
+                if (now <= 900) {
+                    percent = now / 900 * percent;
+                }
+                if (now < 720) {
+                    navIndex.css('box-shadow', '0 0 0 0 rgba(0, 0, 0, 0.05)');
+                } else if (now >= 720 && now <= 900) {
+                    const indexPercent = (now - 720) / 80;
+                    navIndex.css('box-shadow', '0 ' + indexPercent + 'px 2px 0 #CCC');
+                } else if (now > 900) {
+                    navIndex.css('box-shadow', '0 2px 2px 0 #CCC');
+                }
+                if (!isExpand) {
+                    //未展开的时候设置透明度变化
+                    navIndex.css('background', 'rgba(255,255,255,' + percent + ')');
+                }
+            });
+        });
+    </script>
+    <script async src="https://umami.mystery0.vip/script.js" data-website-id="42e803cc-1937-4d69-b430-824e034bdfb3"></script>
+</body>
+
+</html>

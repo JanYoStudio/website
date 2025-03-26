@@ -1,0 +1,65 @@
+/*轮播*/
+
+#banner {
+    width: 100% !important;
+    height: 900px !important;
+}
+
+#banner1 {
+    background-image: url("/img/ban1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    padding-top: 55vh;
+}
+
+#banner2 {
+    background-image: url("/img/ban2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    padding-top: 55vh;
+}
+
+.timeline-cus p {
+    font-size: 16px;
+    color: #ababab;
+    line-height: 28px;
+}
+
+.timeline-cus p.title,
+p.title {
+    color: #484848;
+    font-size: 24px;
+    text-align: center;
+    line-height: 160px;
+}
+
+.timeline-cus p.title span,
+p.title span {
+    color: #2db5a3;
+}
+
+bioContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+bioCard {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+bioCard>img {
+    height: 120px;
+    width: auto;
+}

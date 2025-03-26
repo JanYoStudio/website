@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JanYo Studio - 关于</title>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.6/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+
+<body>
+    <!--导航-->
+    <div class="nav">
+        <div class="layui-container">
+            <div class="nav-logo" id="navLogo"></div>
+            <div class="nav-list">
+                <button>
+                <span></span><span></span><span></span>
+            </button>
+                <ul class="layui-nav" id="navList" lay-filter></ul>
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content-cus">
+        <!-- banner部分 -->
+        <div class="banner about">
+            <div class="title">
+                <p>关于我们</p>
+                <p class="en">About Us</p>
+            </div>
+        </div>
+        <!--成员-->
+        <div class="layui-container">
+            <div class="layui-row">
+                <div class="layui-col-md12 center layui-text">
+                    <h4 style="margin-top: 60px;margin-bottom: 60px;">工作室成员</h4>
+                    <div class="row center">
+                        <bioContainer class="layui-col-md4 layui-col-xs12">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/dl.jpeg" draggable="false" alt="">
+                                <h5>Dick Light</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/lyh.jpeg" draggable="false" alt="">
+                                <h5>liuyuhong</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/cg.jpeg" draggable="false" alt="">
+                                <h5>艾佳琛</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/my.jpeg" draggable="false" alt="">
+                                <h5>Mystery0</h5>
+                            </bioCard>
+                        </bioContainer>
+                        <bioContainer class="layui-col-md4 layui-col-xs12 ">
+                            <bioCard>
+                                <img class="layui-circle" src="/img/gs.jpeg" draggable="false" alt="">
+                                <h5>Gsoy</h5>
+                            </bioCard>
+                        </bioContainer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-container">
+            <hr class="layui-bg-cyan">
+            <div class="layui-row">
+                <div class="layui-col-md12 center layui-text">
+                    <h4 style="margin-top: 60px; margin-bottom: 60px;">酱油工作室</h4>
+                    <div class="layui-col-md8 layui-col-md-offset2 row center">
+                        <p class="detail">「JanYo Studio」工作室成立于2014年11月，汇聚多方技术人才，以兴趣作前进的动力；以创新作前进的目标。 我们致力推动科技与时代的融合，在最好的时代，汇聚当下最优的资源，献上最好的科技体验。
+                        </p>
+                        <p class="detail">「JanYo Studio」工作室专业从事Android应用程序开发，目前已有多个成功案例，均可在官网浏览并下载。往后将会有更多的惊喜等待着我们去发掘。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer部分 -->
+    <footer class="footer" id="footer"></footer>
+
+    <script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
+    <script src="/js/config.js"></script>
+    <script>
+        layui.use(['toolbar', 'footer', 'element', 'jquery'], function() {
+            layui.toolbar.init('about');
+            const $ = layui.jquery;
+            //轮播文字
+            $(function() {
+                $('.banner').children('.title').addClass('active');
+            });
+        });
+    </script>
+    <script async src="https://umami.mystery0.vip/script.js" data-website-id="42e803cc-1937-4d69-b430-824e034bdfb3"></script>
+</body>
+
+</html>

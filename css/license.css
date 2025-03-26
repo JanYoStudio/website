@@ -1,0 +1,23 @@
+.layui-text h1 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.layui-text {
+    font-size: 16px;
+    line-height: 2.0;
+}
+
+.layui-text strong {
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+    .layui-text h1 {
+        font-size: 24px;
+    }
+}

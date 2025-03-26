@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQ - WhatAnime</title>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.6/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+
+<body>
+    <!--导航-->
+    <div class="nav">
+        <div class="layui-container">
+            <div class="nav-logo" id="navLogo"></div>
+            <div class="nav-list">
+                <button>
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="layui-nav" id="navList" lay-filter></ul>
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content-cus">
+        <div class="layui-container">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">我能使用哪些图片进行检索？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <blockquote class="layui-elem-quote">不同质量以及类型的图片将对检索结果的准确度造成直接影响</blockquote>
+                        <p><strong>注意：</strong>根据检索原理，“WhatAnime” 仍然无法保证能够检索到正确结果，结果质量由用户筛选。</p>
+                        <br>
+                        <p>用于检索的图像<strong>尽量避免</strong>与原视频有以下不匹配特征：</p>
+                        <p>
+                            <number>﹝1﹞</number>附加有额外边框，这可能是播放器提供的视频缩放功能所致；
+                        </p>
+                        <p>
+                            <number>﹝2﹞</number>图像被裁剪，裁剪图像会导致信息内容大量丢失；
+                        </p>
+                        <p>
+                            <number>﹝3﹞</number>图像被翻转；
+                        </p>
+                        <p>
+                            <number>﹝4﹞</number>图像可能被应用了滤镜效果，会严重扭曲原始视频截图中的信息；
+                        </p>
+                        <p>
+                            <number>﹝5﹞</number>动漫发行年代过于久远，系统未编入索引；
+                        </p>
+                        <p>
+                            <number>﹝6﹞</number><strong>非日本动漫番剧截图；</strong>
+                        </p>
+                        <p>
+                            <number>﹝7﹞</number>图像画面色彩过于黑暗；
+                        </p>
+                        <p>
+                            <number>﹝8﹞</number>视频截图图像文件分辨率过低，至少需要像素为<code>320x180</code>方能建立检索任务。
+                        </p>
+                        <br>
+                        <p>除此之外你仍然可以使用以下特征的图像用于检索：</p>
+                        <p>
+                            <number>﹝1﹞</number>略有扭曲的图像尺寸；
+                        </p>
+                        <p>
+                            <number>﹝2﹞</number>图像中的字幕大小合理；
+                        </p>
+                        <p>
+                            <number>﹝3﹞</number>一帧的GIF；
+                        </p>
+                        <p>
+                            <number>﹝4﹞</number>动漫场景的设计图纸（搜索图像不必直接从动画屏幕截图中获取。您可以使用某些场景的绘图，只要它与原始场景相似即可）。
+                        </p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">为什么无法检索到正确结果？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <blockquote class="layui-elem-quote">检索结果由原<a href="https://trace.moe">“WhatAnime”</a>提供
+                        </blockquote>
+                        <br>
+                        <p>可能的原因有</p>
+                        <p>
+                            <number>﹝1﹞</number>提供的图像不符合上诉8条要求；
+                        </p>
+                        <p>
+                            <number>﹝2﹞</number>可能暂时无法访问<a href="https://trace.moe">“WhatAnime”服务器</a>；
+                        </p>
+                        <p>
+                            <number>﹝3﹞</number>系统尚未为该动漫建立检索索引信息；
+                        </p>
+                        <p>
+                            <number>﹝4﹞</number>
+                            图像搜索算法设计用于几乎完全匹配，而不是类似的匹配。它分析图像的颜色布局。因此，当您的图像不是完整的未裁剪原始`16：9`屏幕截图（即裁剪图像）时，搜索可能会失败。
+                        </p>
+                        <p>
+                            <number>﹝5﹞</number>使用的是真实照片（非动漫取景地）进行检索，肯定是行不通的。
+                        </p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">为什么匹配会失败？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <ul>
+                            <li>
+                                <p>颜色是正确搜索的重要因素，如果对屏幕截图应用重色调和滤镜（即灰度、对比度、饱和度，、亮度、棕褐色），则会丢失太多信息。在这种情况下，搜索也会失败。边缘直方图可以通过忽略颜色和仅搜索边缘来解决此问题。但是我的计算资源不足以支持另一个图像描述符;
+                            </li>
+                            <li>
+                                <p>图像变换也是一个重要因素。如果在不保持原始宽高比（即拉长、翻转、旋转）的情况下缩放图像，则搜索也将失败;</p>
+                            </li>
+                            <li>
+                                <p>文字占据了太多的图像。图像上的大文本会干扰原始图像。系统不够智能，无法忽略文本;</p>
+                            </li>
+                            <li>
+                                <p>如果您的图像具有太少的区分特征（例如，暗图像或具有大的普通颜色的普通块的图像），则搜索也将失败。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">它是如何工作的？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <blockquote class="layui-elem-quote">它使用MPEG 7颜色布局描述符来比较图像。
+                            <a href="https://en.wikipedia.org/wiki/Color_layout_descriptor"></a>维基百科有一个很好的例证。这也可以解释为什么你找不到你的结果。
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">如何使我的检索结果更为准确？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <ul>
+                            <li>
+                                <p>在搜索之前将屏幕截图裁剪为<code>16:9</code>或<code>4:3</code>；
+                            </li>
+                            <li>
+                                <p>删除截图中的任何额外边框（如果有）。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">什么动漫被系统分析并建立索引？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <blockquote class="layui-elem-quote">
+                            自2000年以来大多数日本动漫都被编入索引，加上一些流行动漫在20世纪90年代，以及1990年以前的小动漫。现阶段的动漫列表不完整，包括Jewelpet、Yu-Gi-Oh !、龙珠、蜡笔小新、哆啦A梦、神奇宝贝、名侦探柯南、赤壁小丸子和老无尽动漫。
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">我如何观看整部动漫？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <blockquote class="layui-elem-quote">“WhatAnime”<strong>不提供</strong>视频播放服务。</blockquote>
+                        <p>如果您想观看动漫，可以查看哪个电视频道正在您所在的国家/地区播放动漫。对于已完成播出的人，请考虑购买或租用原始的蓝光/DVD。</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">为什么会出现广告？</h2>
+                    <div class="layui-colla-content layui-show">
+                        <p><strong>因为您检索了不该检索的东西（Porn视频截图等非动漫截图）！！！</strong></p>
+                        <br>
+                        <p>系统会尝试自动判定检索的图片是否合理;</p>
+                        <p>如果对于我们的判定有异议，欢迎发送邮件到<code><a href="mailto:mystery0dyl520@gmail.com">mystery0dyl520@gmail.com</a></code>提交复核请求。
+                        </p>
+                        <br>
+                        <pre class="layui-code">
+标题：WhatAnime复核请求
+正文：
+    应用版本名称：<从关于界面获取>
+    应用版本号：<从关于界面获取>
+    设备id: <从关于界面获取></pre>
+                        <p><strong>不满足格式的邮件将会忽略！</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer部分 -->
+    <footer class="footer" id="footer"></footer>
+
+    <script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
+    <script src="/js/config.js"></script>
+    <script>
+        layui.use(['toolbar', 'footer', 'element', 'code'], function() {
+            layui.toolbar.init('wa_faq');
+            layui.code({
+                title: '复核申请格式',
+                about: false
+            });
+        });
+    </script>
+    <script async src="https://umami.mystery0.vip/script.js" data-website-id="42e803cc-1937-4d69-b430-824e034bdfb3"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.banner {
+    height: 320px;
+}
+
+.banner.about {
+    background: url(/img/nav_about.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.banner .title {
+    padding-top: 170px;
+}
+
+.banner .title.active {
+    padding-top: 120px;
+    transition: 1.5s;
+}
+
+.banner .title p {
+    color: #606060;
+    font-size: 36px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 5px;
+}
+
+.banner .title p.en {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.detail {
+    font-size: 16px;
+    line-height: 28px;
+    color: #949494;
+    padding-bottom: 30px;
+}
