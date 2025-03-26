@@ -8,19 +8,6 @@
       </div>
     </div>
 
-    <!-- 工作室成员部分 -->
-    <div class="team-section">
-      <h2>工作室成员</h2>
-      <el-row :gutter="20">
-        <el-col :span="8" v-for="member in teamMembers" :key="member.name">
-          <el-card class="team-card">
-            <el-avatar :size="120" :src="member.avatar" />
-            <h3>{{ member.name }}</h3>
-          </el-card>
-        </el-col>
-      </el-row>
-    </div>
-
     <!-- 工作室介绍部分 -->
     <div class="intro-section">
       <h2>酱油工作室</h2>
@@ -29,34 +16,14 @@
         <p>「JanYo Studio」工作室专业从事Android应用程序开发，目前已有多个成功案例，均可在官网浏览并下载。往后将会有更多的惊喜等待着我们去发掘。</p>
       </div>
     </div>
+
+    <!-- 工作室成员部分 -->
+    <HomeTeam />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const teamMembers = ref([
-  {
-    name: 'Dick Light',
-    avatar: '/images/dl.jpeg'
-  },
-  {
-    name: 'liuyuhong',
-    avatar: '/images/lyh.jpeg'
-  },
-  {
-    name: '艾佳琛',
-    avatar: '/images/cg.jpeg'
-  },
-  {
-    name: 'Mystery0',
-    avatar: '/images/my.jpeg'
-  },
-  {
-    name: 'Gsoy',
-    avatar: '/images/gs.jpeg'
-  }
-])
+import HomeTeam from '../components/HomeTeam.vue'
 </script>
 
 <style scoped>
@@ -66,11 +33,13 @@ const teamMembers = ref([
 
 .banner-section {
   height: 300px;
-  background: linear-gradient(135deg, #409EFF 0%, #36cfc9 100%);
+  background-image: url('/images/nav_about.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -83,26 +52,6 @@ const teamMembers = ref([
 .banner-content .en {
   font-size: 1.2em;
   opacity: 0.8;
-}
-
-.team-section {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.team-section h2 {
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.team-card {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.team-card h3 {
-  margin-top: 15px;
-  color: #333;
 }
 
 .intro-section {
@@ -127,4 +76,4 @@ const teamMembers = ref([
   line-height: 1.8;
   color: #666;
 }
-</style> 
+</style>

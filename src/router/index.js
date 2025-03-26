@@ -1,25 +1,35 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import Product from "../views/Product.vue";
+import License from "../views/License.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("@/views/Home.vue"),
+    component: Home,
   },
   {
     path: "/about",
     name: "About",
-    component: () => import("@/views/About.vue"),
+    component: About,
   },
   {
     path: "/product",
     name: "Product",
-    component: () => import("@/views/Product.vue"),
+    component: Product,
   },
   {
     path: "/license",
     name: "License",
-    component: () => import("@/views/License.vue"),
+    component: License,
+  },
+  {
+    path: "/:path(.*).html",
+    redirect: (to) => {
+      return { path: to.params.path };
+    },
   },
 ];
 

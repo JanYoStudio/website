@@ -11,48 +11,14 @@
     <!-- 产品列表 -->
     <div class="product-list">
       <el-row :gutter="20">
-        <el-col :span="24">
-          <div class="product-item">
-            <el-row :gutter="40">
-              <el-col :span="12">
-                <div class="product-image">
-                  <img src="/images/what-anime.jpg" alt="WhatAnime">
-                </div>
-              </el-col>
-              <el-col :span="12">
-                <div class="product-info">
-                  <h2><a href="/wa/index.html">WhatAnime - 以图搜番</a></h2>
-                  <p class="description">如果你在网络上看到一张酷似二次元番剧的插图，并且相当的感兴趣，你可以保存起来，使用WhatAnime找到它的出处。</p>
-                  <div class="download-section">
-                    <a href="https://play.google.com/store/apps/details?id=pw.janyo.whatanime&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-                      <img alt="下载应用，请到 Google Play" style="height: 80px;" src="/images/google-play.png" />
-                    </a>
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-          </div>
-
-          <el-divider />
-
-          <div class="product-item">
-            <el-row :gutter="40">
-              <el-col :span="12">
-                <div class="product-image">
-                  <img src="/images/janyo-share.jpg" alt="JanYo Share">
-                </div>
-              </el-col>
-              <el-col :span="12">
-                <div class="product-info">
-                  <h2><a href="/jys/index.html">JanYo Share - 更好的分享应用</a></h2>
-                  <p class="description">想要将应用分享给朋友但是复制出来是base.apk？自己懒得命名？通过社交软件分享APP，过一段时间群文件全部是base.apk？每一次清理群文件都很麻烦？现在，通过JanYo Share，体验一键式操作。</p>
-                  <div class="download-section">
-                    <p>目前已经停止开发</p>
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-          </div>
+        <el-col :span="24" v-for="product in products" :key="product.name">
+          <ProductItem :product="product" :disable="product.disable">
+            <template v-if="!product.disable" #download>
+              <a v-if="product.playStoreLink" :href="product.playStoreLink">
+                <img alt="下载应用，请到 Google Play" style="height: 80px;" src="/images/google-play.png" />
+              </a>
+            </template>
+          </ProductItem>
         </el-col>
       </el-row>
     </div>
@@ -60,7 +26,25 @@
 </template>
 
 <script setup>
-// 组件逻辑
+import { ref } from 'vue'
+import ProductItem from '../components/ProductItem.vue'
+
+const products = ref([
+  {
+    name: 'WhatAnime - 以图搜番',
+    description: '如果你在网络上看到一张酷似二次元番剧的插图，并且相当的感兴趣，你可以保存起来，使用WhatAnime找到它的出处。',
+    image: '/images/what-anime.jpg',
+    link: '/wa/index.html',
+    playStoreLink: 'https://play.google.com/store/apps/details?id=pw.janyo.whatanime&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+  },
+  {
+    name: 'JanYo Share - 更好的分享应用',
+    description: '想要将应用分享给朋友但是复制出来是base.apk？自己懒得命名？通过社交软件分享APP，过一段时间群文件全部是base.apk？每一次清理群文件都很麻烦？现在，通过JanYo Share，体验一键式操作。',
+    image: '/images/janyo-share.jpg',
+    link: '/jys/index.html',
+    disable: true
+  }
+])
 </script>
 
 <style scoped>
@@ -70,7 +54,9 @@
 
 .banner-section {
   height: 300px;
-  background: linear-gradient(135deg, #409EFF 0%, #36cfc9 100%);
+  background-image: url('/images/nav_product.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,4 +131,4 @@
 :deep(.el-divider) {
   margin: 40px 0;
 }
-</style> 
+</style>
