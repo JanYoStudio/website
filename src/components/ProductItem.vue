@@ -1,12 +1,12 @@
 <template>
     <div class="product-item">
         <el-row :gutter="40">
-            <el-col :span="12">
+            <el-col :xl="12" :lg="12" :md="12" :sm="24" :xs="24">
                 <div class="product-image">
                     <img :src="product.image" :alt="product.name">
                 </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :xl="12" :lg="12" :md="12" :sm="24" :xs="24">
                 <div class="product-info">
                     <h2>{{ product.name }}</h2>
                     <p class="description">{{ product.description }}</p>

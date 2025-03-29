@@ -1,12 +1,7 @@
 <template>
   <el-container class="app-container">
     <el-header>
-      <nav class="nav-menu">
-        <router-link to="/">首页</router-link>
-        <router-link to="/product">产品</router-link>
-        <router-link to="/license">许可证</router-link>
-        <router-link to="/about">关于</router-link>
-      </nav>
+      <NavBar />
     </el-header>
 
     <el-main>
@@ -22,40 +17,45 @@
   </el-container>
 </template>
 
+<script setup>
+import NavBar from './components/NavBar.vue'
+</script>
+
 <style scoped>
 .app-container {
   min-height: 100vh;
-}
-
-.nav-menu {
   display: flex;
-  gap: 64px;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.nav-menu a {
-  color: #333;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.nav-menu a:hover {
-  color: #409EFF;
+  flex-direction: column;
 }
 
 .el-header {
+  padding: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .el-footer {
+  background-color: #f5f5f5;
+  padding: 20px;
   text-align: center;
-  background-color: #f5f7fa;
 }
 
 .el-main {
-  padding: 0px;
+  flex: 1;
+  padding: 80px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
 }
 
 .beian-link {
@@ -66,5 +66,19 @@
 
 .beian-link:hover {
   color: #409EFF;
+}
+
+@media screen and (max-width: 768px) {
+  .el-main {
+    padding: 60px 10px 10px;
+  }
+
+  .el-footer {
+    padding: 15px;
+  }
+
+  .footer-content {
+    font-size: 12px;
+  }
 }
 </style>

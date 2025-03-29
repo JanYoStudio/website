@@ -2,7 +2,7 @@
     <div class="team-section">
         <h2 class="section-title">工作室成员</h2>
         <el-row :gutter="20">
-            <el-col :span="8" v-for="member in teamMembers" :key="member.name">
+            <el-col :xl="8" :lg="8" :md="12" :sm="12" :xs="24" v-for="member in teamMembers" :key="member.name">
                 <el-card class="team-card" shadow="never">
                     <el-avatar :size="120" :src="member.avatar" />
                     <h3>{{ member.name }}</h3>
