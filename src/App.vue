@@ -13,8 +13,11 @@
       <router-view></router-view>
     </el-main>
 
-    <el-footer>
+    <el-footer height="120px">
       <p>&copy; 2025 酱油工作室. All rights reserved.</p>
+      <p>
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="beian-link">湘ICP备2025109058号-1</a>
+      </p>
     </el-footer>
   </el-container>
 </template>
@@ -53,5 +56,15 @@
 
 .el-main {
   padding: 0px;
+}
+
+.beian-link {
+  color: #666;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.beian-link:hover {
+  color: #409EFF;
 }
 </style>
