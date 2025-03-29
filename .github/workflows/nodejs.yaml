@@ -1,0 +1,37 @@
+name: Deploy
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "pnpm"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Setup qshell
+        run: |
+          wget -O qshell.tar.gz https://github.com/qiniu/qshell/releases/download/v2.14.0/qshell-v2.14.0-linux-amd64.tar.gz
+          tar zxvf qshell.tar.gz
+          rm -rf /github/home/.qshell/users/qiniu/qupload2
+      - name: login to qshell
+        run: |
+          ./qshell account ${{ secrets.QINIU_ACCESS_KEY }} ${{ secrets.QINIU_ACCESS_SECRET }} qiniu
+      - name: delete old file
+        run: |
+          ./qshell listbucket2 ${{ secrets.BUCKET }} --prefix static/ --show-fields Key | grep -v Key | awk '{print $1}' > old.list
+          ./qshell batchdelete ${{ secrets.BUCKET }} -i old.list
+      - name: upload to qiniu cloud
+        run: ./qshell qupload2 --src-dir=./build --bucket=${{ secrets.BUCKET }} --overwrite
+      - name: refresh cdn
+        run: ./qshell cdnrefresh --dirs -i cdn_refresh.list
