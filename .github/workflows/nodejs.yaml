@@ -28,9 +28,9 @@ jobs:
           ./qshell account ${{ secrets.QINIU_ACCESS_KEY }} ${{ secrets.QINIU_ACCESS_SECRET }} qiniu
       - name: delete old file
         run: |
-          ./qshell listbucket2 ${{ secrets.BUCKET }} --prefix static/ --show-fields Key | grep -v Key | awk '{print $1}' > old.list
+          ./qshell listbucket2 ${{ secrets.BUCKET }} --show-fields Key | grep -v Key | awk '{print $1}' > old.list
           ./qshell batchdelete ${{ secrets.BUCKET }} -i old.list
       - name: upload to qiniu cloud
-        run: ./qshell qupload2 --src-dir=./build --bucket=${{ secrets.BUCKET }} --overwrite
+        run: ./qshell qupload2 --src-dir=./dist --bucket=${{ secrets.BUCKET }} --overwrite
       - name: refresh cdn
         run: ./qshell cdnrefresh --dirs -i cdn_refresh.list
