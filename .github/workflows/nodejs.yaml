@@ -26,8 +26,9 @@ jobs:
       - name: login to qshell
         run: |
           ./qshell account ${{ secrets.QINIU_ACCESS_KEY }} ${{ secrets.QINIU_ACCESS_SECRET }} qiniu
-          rm -rf ~/.qshell/users/qiniu/listbucket2
-          rm -rf ~/.qshell/users/qiniu/batchdelete
+          rm -rf /home/runner/.qshell/users/qiniu/listbucket2
+          rm -rf /home/runner/.qshell/users/qiniu/batchdelete
+          rm -rf /home/runner/.qshell/users/qiniu/qupload2
       - name: delete old file
         run: |
           ./qshell listbucket2 ${{ secrets.BUCKET }} --show-fields Key | grep -v 'Key' | grep -v '[I]' | awk '{print $1}' > old.list
