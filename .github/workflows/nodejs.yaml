@@ -20,15 +20,17 @@ jobs:
         run: pnpm build
       - name: Setup qshell
         run: |
-          wget -O qshell.tar.gz https://github.com/qiniu/qshell/releases/download/v2.14.0/qshell-v2.14.0-linux-amd64.tar.gz
+          wget -O qshell.tar.gz https://github.com/qiniu/qshell/releases/download/v2.16.0/qshell-v2.16.0-linux-amd64.tar.gz
           tar zxvf qshell.tar.gz
           rm -rf /github/home/.qshell/users/qiniu/qupload2
       - name: login to qshell
         run: |
           ./qshell account ${{ secrets.QINIU_ACCESS_KEY }} ${{ secrets.QINIU_ACCESS_SECRET }} qiniu
+          rm -rf ~/.qshell/users/qiniu/listbucket2
+          rm -rf ~/.qshell/users/qiniu/batchdelete
       - name: delete old file
         run: |
-          ./qshell listbucket2 ${{ secrets.BUCKET }} --show-fields Key | grep -v Key | awk '{print $1}' > old.list
+          ./qshell listbucket2 ${{ secrets.BUCKET }} --show-fields Key | grep -v 'Key' | grep -v '[I]' | awk '{print $1}' > old.list
           ./qshell batchdelete ${{ secrets.BUCKET }} -i old.list
       - name: upload to qiniu cloud
         run: ./qshell qupload2 --src-dir=./dist --bucket=${{ secrets.BUCKET }} --overwrite
