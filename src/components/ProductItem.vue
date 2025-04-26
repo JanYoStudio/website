@@ -32,16 +32,16 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    product: {
-        type: Object,
-        required: true
-    },
-    disable: {
-        type: Boolean,
-        default: false
-    }
-})
+defineProps({
+  product: {
+    type: Object,
+    required: true
+  },
+  disable: {
+    type: Boolean,
+    default: false
+  }
+});
 </script>
 
 <style scoped>

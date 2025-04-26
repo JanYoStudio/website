@@ -35,7 +35,7 @@
   max-width: 960px;
 }
 
-h1 {
+.license-content h1 {
   color: #333;
   text-align: center;
 }
@@ -48,6 +48,7 @@ h1 {
 }
 
 .license-text {
+  color: #333;
   max-width: 720px;
   text-align: left;
   margin: 0 auto;
@@ -57,5 +58,29 @@ h1 {
   margin-top: 30px;
   text-align: center;
   color: #409EFF;
+}
+
+@media screen and (max-width: 768px) {
+  .license-content h1 {
+    color: #333;
+    text-align: center;
+    font-size: large;
+  }
+
+  .notice {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: medium;
+  }
+
+  .license-text {
+    color: #333;
+    max-width: 720px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: small;
+  }
 }
 </style>

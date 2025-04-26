@@ -77,24 +77,10 @@ const products = ref([
   padding: 0 40px 60px;
 }
 
-.product-item {
-  margin-bottom: 60px;
-}
-
-.product-image {
-  height: 300px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.product-info {
-  padding: 20px 0;
 }
 
 .product-info h2 {
@@ -111,22 +97,9 @@ const products = ref([
   text-decoration: underline;
 }
 
-.description {
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.download-section {
-  margin-top: 20px;
-}
-
 .download-section p {
   color: #999;
   font-style: italic;
 }
 
-:deep(.el-divider) {
-  margin: 40px 0;
-}
 </style>

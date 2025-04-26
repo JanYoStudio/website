@@ -8,7 +8,7 @@
       <router-view></router-view>
     </el-main>
 
-    <el-footer height="120px">
+    <el-footer height="120px" class="footer-content">
       <p>&copy; 2025 酱油工作室. All rights reserved.</p>
       <p>
         <a href="https://beian.miit.gov.cn/" target="_blank" class="beian-link">湘ICP备2025109058号-1</a>
